@@ -1,6 +1,7 @@
 'use client'
 
 import { Facebook, Instagram, Youtube, Twitter } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -9,7 +10,13 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Logo & Tagline */}
           <div>
-            <div className="text-3xl font-bold mb-3 font-heading">ED24</div>
+            <Image 
+              src="/images/ed24-logo.jpeg" 
+              alt="ED24 Logo" 
+              width={120}
+              height={40}
+              className="h-10 w-auto mb-3 filter brightness-0 invert"
+            />
             <p className="text-gray-300 text-sm mb-4">
               Education for Everyone - Bopal's oldest and trusted one-stop skill development center.
             </p>
