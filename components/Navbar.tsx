@@ -35,9 +35,14 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <div className="text-3xl font-bold font-heading text-ed24-orange">
-              ED24
-            </div>
+            <Image 
+              src="/images/ed24-logo.jpeg" 
+              alt="ED24 Logo" 
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+              priority
+            />
             <span className="text-xs text-white/80 font-medium hidden sm:block">
               education for everyone
             </span>
