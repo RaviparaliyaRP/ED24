@@ -125,40 +125,40 @@ function CourseCard({ course, index }: { course: typeof courses[0], index: numbe
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.1, duration: 0.6 }}
-      className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-gray-100"
+      className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 hover:border-ed24-orange/30 group"
     >
-      <div className="p-6 space-y-4">
-        {/* Icon */}
-        <div className={`w-16 h-16 ${course.color} rounded-lg flex items-center justify-center`}>
-          <IconComponent className="w-8 h-8 text-white" />
+      <div className="p-8 space-y-5 bg-gradient-to-br from-white to-gray-50 hover:from-white hover:to-ed24-orange/5 transition-all duration-300">
+        {/* Icon with gradient */}
+        <div className={`w-20 h-20 ${course.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+          <IconComponent className="w-10 h-10 text-white" />
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 font-heading">
+        <h3 className="text-2xl font-bold text-gray-900 font-heading group-hover:text-ed24-purple transition-colors">
           {course.title}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 text-sm">
+        <p className="text-gray-600 text-base leading-relaxed">
           {course.description}
         </p>
 
-        {/* Features */}
-        <ul className="space-y-2">
+        {/* Features with better design */}
+        <ul className="space-y-3">
           {course.features.map((feature, idx) => (
-            <li key={idx} className="flex items-start gap-2 text-sm text-gray-700">
-              <span className="text-ed24-orange mt-1">✓</span>
+            <li key={idx} className="flex items-start gap-3 text-sm text-gray-700">
+              <div className="mt-1 w-1.5 h-1.5 bg-ed24-orange rounded-full flex-shrink-0"></div>
               <span>{feature}</span>
             </li>
           ))}
         </ul>
 
-        {/* CTA */}
+        {/* CTA with improved design */}
         <a
           href="tel:9377002424"
-          className="flex items-center justify-center gap-2 bg-ed24-purple hover:bg-opacity-90 text-white px-4 py-2 rounded-lg transition-colors font-medium text-sm"
+          className="flex items-center justify-center gap-2 bg-gradient-to-r from-ed24-purple to-ed24-orange hover:from-ed24-orange hover:to-ed24-purple text-white px-6 py-3 rounded-xl transition-all duration-300 font-semibold text-sm shadow-md hover:shadow-lg hover:scale-105 transform"
         >
-          <Phone className="w-4 h-4" />
+          <Phone className="w-5 h-5" />
           Call ED24
         </a>
       </div>

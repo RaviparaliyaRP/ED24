@@ -84,7 +84,7 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
-                  className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                  className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl border-2 border-gray-100 hover:border-ed24-orange/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 >
                   <IconComponent className={`w-8 h-8 ${stat.color} mb-3`} />
                   <div className="text-3xl font-bold text-gray-900 mb-1">
@@ -106,7 +106,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 text-center bg-gradient-to-r from-ed24-purple to-ed24-orange rounded-2xl p-8 text-white"
+            className="mt-16 text-center bg-gradient-to-br from-ed24-purple via-purple-800 to-ed24-orange rounded-3xl p-10 md:p-12 text-white shadow-2xl"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-4 font-heading">
             Welcome to ED24 - Education for Everyone

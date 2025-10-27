@@ -13,6 +13,10 @@ module.exports = {
         'ed24-khaki': '#F1DC8D',
         'ed24-brown': '#60311F',
       },
+      backgroundImage: {
+        'gradient-brand': 'linear-gradient(135deg, #FABB38 0%, #F1DC8D 100%)',
+        'gradient-purple': 'linear-gradient(135deg, #60311F 0%, #8B4C6A 100%)',
+      },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
         heading: ['Poppins', 'sans-serif'],
