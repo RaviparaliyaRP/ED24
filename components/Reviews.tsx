@@ -56,7 +56,7 @@ export default function Reviews() {
         </motion.div>
 
         {/* Reviews Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {reviews.map((review, index) => (
             <motion.div
               key={index}
@@ -64,28 +64,28 @@ export default function Reviews() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.6 }}
-              className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+              className="bg-white rounded-lg sm:rounded-xl p-5 sm:p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-3 sm:mb-4">
                 {[...Array(review.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-ed24-orange text-ed24-orange" />
+                  <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-ed24-orange text-ed24-orange" />
                 ))}
               </div>
 
               {/* Review Text */}
-              <p className="text-gray-700 mb-6 italic">
+              <p className="text-gray-700 mb-4 sm:mb-6 italic text-sm sm:text-base">
                 "{review.text}"
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-gray-100">
-                <div className="w-12 h-12 bg-ed24-orange/10 rounded-full flex items-center justify-center text-2xl">
+              <div className="flex items-center gap-3 pt-3 sm:pt-4 border-t border-gray-100">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-ed24-orange/10 rounded-full flex items-center justify-center text-xl sm:text-2xl">
                   {review.avatar}
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">{review.name}</div>
-                  <div className="text-sm text-gray-600">{review.course}</div>
+                  <div className="font-semibold text-gray-900 text-sm sm:text-base">{review.name}</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{review.course}</div>
                 </div>
               </div>
             </motion.div>
@@ -100,11 +100,11 @@ export default function Reviews() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="text-center mt-12"
         >
-          <a
+              <a
             href="https://www.justdial.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-ed24-purple hover:text-ed24-orange font-semibold transition-colors underline"
+            className="text-ed24-purple hover:text-ed24-orange font-semibold transition-colors underline text-sm sm:text-base"
           >
             Read more reviews on JustDial →
           </a>

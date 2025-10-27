@@ -73,7 +73,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-2 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
           >
             {stats.map((stat, index) => {
               const IconComponent = stat.icon
@@ -84,16 +84,16 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.05, duration: 0.3 }}
-                  className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl border-2 border-gray-100 hover:border-ed24-orange/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-br from-white to-gray-50 p-6 sm:p-8 rounded-xl sm:rounded-2xl shadow-xl border-2 border-gray-100 hover:border-ed24-orange/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 >
-                  <IconComponent className={`w-8 h-8 ${stat.color} mb-3`} />
-                  <div className="text-3xl font-bold text-gray-900 mb-1">
+                  <IconComponent className={`w-6 h-6 sm:w-8 sm:h-8 ${stat.color} mb-2 sm:mb-3`} />
+                  <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
                     {stat.value}
                   </div>
                   {stat.subValue && (
-                    <div className="text-sm text-gray-600 mb-2">{stat.subValue}</div>
+                    <div className="text-xs sm:text-sm text-gray-600 mb-2">{stat.subValue}</div>
                   )}
-                  <div className="text-sm text-gray-600">{stat.label}</div>
+                  <div className="text-xs sm:text-sm text-gray-600">{stat.label}</div>
                 </motion.div>
               )
             })}
@@ -106,27 +106,27 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="mt-16 text-center bg-gradient-to-br from-ed24-purple via-purple-800 to-ed24-orange rounded-3xl p-10 md:p-12 text-white shadow-2xl"
+          className="mt-8 sm:mt-16 text-center bg-gradient-to-br from-ed24-purple via-purple-800 to-ed24-orange rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 text-white shadow-2xl mx-4"
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-4 font-heading">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3 sm:mb-4 font-heading">
             Welcome to ED24 - Education for Everyone
           </h3>
-          <p className="text-white/90 mb-6 max-w-2xl mx-auto">
+          <p className="text-white/90 mb-4 sm:mb-6 max-w-2xl mx-auto text-sm sm:text-base">
             Whether you're a school student, college student, working professional, 
             job seeker, or homemaker - we have the perfect course for you.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <a
               href="https://wa.me/919377002424"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-white text-ed24-purple px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-ed24-purple px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-sm sm:text-base w-full sm:w-auto text-center"
             >
               Join ED24 Today
             </a>
             <a
               href="tel:9377002424"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              className="border-2 border-white text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm sm:text-base w-full sm:w-auto text-center"
             >
               Call Now: 9377002424
             </a>
