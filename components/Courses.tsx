@@ -122,9 +122,9 @@ function CourseCard({ course, index }: { course: typeof courses[0], index: numbe
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ delay: index * 0.1, duration: 0.6 }}
+      transition={{ delay: index * 0.05, duration: 0.4 }}
       className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 hover:border-ed24-orange/30 group"
     >
       <div className="p-8 space-y-5 bg-gradient-to-br from-white to-gray-50 hover:from-white hover:to-ed24-orange/5 transition-all duration-300">

@@ -28,19 +28,19 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-            <div className="h-12 w-40 relative">
-              <div className="text-2xl font-bold text-ed24-purple font-heading">
+            <div className="text-3xl font-bold font-heading">
+              <span className="bg-gradient-to-r from-ed24-orange to-yellow-400 bg-clip-text text-transparent">
                 ED24
-              </div>
+              </span>
             </div>
-            <span className="text-xs text-gray-600 hidden sm:block">
+            <span className="text-xs text-gray-400 font-medium hidden sm:block">
               education for everyone
             </span>
           </div>
@@ -49,19 +49,25 @@ export default function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('courses')}
-              className="text-gray-700 hover:text-ed24-purple transition-colors font-medium"
+              className={`transition-colors font-semibold ${
+                isScrolled ? 'text-gray-700 hover:text-ed24-purple' : 'text-white hover:text-ed24-orange'
+              }`}
             >
               Courses
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-ed24-purple transition-colors font-medium"
+              className={`transition-colors font-semibold ${
+                isScrolled ? 'text-gray-700 hover:text-ed24-purple' : 'text-white hover:text-ed24-orange'
+              }`}
             >
               About Us
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-ed24-purple transition-colors font-medium"
+              className={`transition-colors font-semibold ${
+                isScrolled ? 'text-gray-700 hover:text-ed24-purple' : 'text-white hover:text-ed24-orange'
+              }`}
             >
               Contact
             </button>
@@ -69,13 +75,13 @@ export default function Navbar() {
             {/* CTAs */}
             <button
               onClick={() => window.open('https://wa.me/919377002424', '_blank')}
-              className="bg-ed24-orange hover:bg-orange-500 text-white px-6 py-2 rounded-lg transition-colors font-medium"
+              className="bg-gradient-to-r from-ed24-orange to-yellow-400 hover:from-yellow-400 hover:to-ed24-orange text-white px-8 py-2.5 rounded-xl transition-all duration-300 font-bold shadow-lg hover:shadow-xl hover:scale-105"
             >
               Join ED24
             </button>
             <a
               href="tel:9377002424"
-              className="flex items-center space-x-2 text-ed24-purple hover:text-ed24-orange transition-colors font-medium"
+              className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 hover:border-white/50 px-6 py-2.5 rounded-xl transition-all duration-300 font-semibold"
             >
               <Phone className="w-5 h-5" />
               <span>Call Now</span>

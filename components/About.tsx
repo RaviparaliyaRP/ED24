@@ -26,10 +26,10 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 font-heading mb-6">
               About <span className="text-ed24-orange">ED24</span>
@@ -69,10 +69,10 @@ export default function About() {
 
           {/* Right Stats Grid */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.4 }}
             className="grid grid-cols-2 gap-6"
           >
             {stats.map((stat, index) => {
@@ -80,10 +80,10 @@ export default function About() {
               return (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                  transition={{ delay: index * 0.05, duration: 0.3 }}
                   className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-xl border-2 border-gray-100 hover:border-ed24-orange/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
                 >
                   <IconComponent className={`w-8 h-8 ${stat.color} mb-3`} />
@@ -102,11 +102,11 @@ export default function About() {
 
         {/* Call to Action */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-            className="mt-16 text-center bg-gradient-to-br from-ed24-purple via-purple-800 to-ed24-orange rounded-3xl p-10 md:p-12 text-white shadow-2xl"
+          transition={{ duration: 0.4 }}
+          className="mt-16 text-center bg-gradient-to-br from-ed24-purple via-purple-800 to-ed24-orange rounded-3xl p-10 md:p-12 text-white shadow-2xl"
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-4 font-heading">
             Welcome to ED24 - Education for Everyone
