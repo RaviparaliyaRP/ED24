@@ -27,7 +27,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1, duration: 0.3 }}
-            className="inline-flex items-center gap-2 text-ed24-orange font-bold text-lg sm:text-xl tracking-wider uppercase px-4 py-2 bg-ed24-orange/10 backdrop-blur-sm rounded-full border border-ed24-orange/30"
+            className="inline-flex items-center gap-2 text-ed24-orange font-bold text-sm sm:text-lg md:text-xl tracking-wider uppercase px-3 sm:px-4 py-1.5 sm:py-2 bg-ed24-orange/10 backdrop-blur-sm rounded-full border border-ed24-orange/30 mx-2"
           >
             <span className="w-2 h-2 bg-ed24-orange rounded-full"></span>
             SKILL • RESKILL • UPSKILL
@@ -39,7 +39,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.4 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white font-heading leading-tight"
+            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white font-heading leading-tight px-4"
           >
             <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               An investment in knowledge
@@ -65,20 +65,20 @@ export default function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25, duration: 0.4 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 pt-8 px-4"
           >
             <a
               href="https://wa.me/919377002424"
               target="_blank"
               rel="noopener noreferrer"
-              className="group bg-gradient-to-r from-ed24-orange to-orange-500 hover:from-orange-500 hover:to-ed24-orange text-white px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 flex items-center gap-3 hover:scale-105 transform"
+              className="group bg-gradient-to-r from-ed24-orange to-orange-500 hover:from-orange-500 hover:to-ed24-orange text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 shadow-2xl hover:shadow-orange-500/50 flex items-center gap-2 sm:gap-3 hover:scale-105 transform w-full sm:w-auto justify-center"
             >
               Join ED24
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
+              <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-2 transition-transform" />
             </a>
             <a
               href="tel:9377002424"
-              className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border-2 border-white/50 px-10 py-5 rounded-xl font-bold text-lg transition-all duration-300 hover:border-white"
+              className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white border-2 border-white/50 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl font-bold text-base sm:text-lg transition-all duration-300 hover:border-white w-full sm:w-auto text-center"
             >
               Call Now
             </a>

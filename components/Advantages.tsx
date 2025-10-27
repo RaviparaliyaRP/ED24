@@ -48,7 +48,7 @@ export default function Advantages() {
         </motion.div>
 
         {/* Advantages Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
           {advantages.map((advantage, index) => {
             const IconComponent = advantage.icon
             return (
@@ -58,13 +58,13 @@ export default function Advantages() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05, duration: 0.3 }}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-ed24-orange group cursor-pointer"
+                className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-ed24-orange group cursor-pointer"
               >
-                <div className="flex flex-col items-center text-center space-y-3">
-                  <div className="w-14 h-14 bg-ed24-orange/10 rounded-full flex items-center justify-center group-hover:bg-ed24-orange transition-colors">
-                    <IconComponent className="w-7 h-7 text-ed24-orange group-hover:text-white transition-colors" />
+                <div className="flex flex-col items-center text-center space-y-2 sm:space-y-3">
+                  <div className="w-10 h-10 sm:w-12 sm:h-14 bg-ed24-orange/10 rounded-full flex items-center justify-center group-hover:bg-ed24-orange transition-colors">
+                    <IconComponent className="w-5 h-5 sm:w-6 sm:h-7 text-ed24-orange group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-sm font-semibold text-gray-900 group-hover:text-ed24-purple transition-colors">
+                  <h3 className="text-xs sm:text-sm font-semibold text-gray-900 group-hover:text-ed24-purple transition-colors">
                     {advantage.title}
                   </h3>
                 </div>

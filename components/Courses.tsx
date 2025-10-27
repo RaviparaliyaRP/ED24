@@ -127,19 +127,19 @@ function CourseCard({ course, index }: { course: typeof courses[0], index: numbe
       transition={{ delay: index * 0.05, duration: 0.4 }}
       className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 border-gray-100 hover:border-ed24-orange/30 group"
     >
-      <div className="p-8 space-y-5 bg-gradient-to-br from-white to-gray-50 hover:from-white hover:to-ed24-orange/5 transition-all duration-300">
+      <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-5 bg-gradient-to-br from-white to-gray-50 hover:from-white hover:to-ed24-orange/5 transition-all duration-300">
         {/* Icon with gradient */}
-        <div className={`w-20 h-20 ${course.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+        <div className={`w-16 h-16 sm:w-20 sm:h-20 ${course.color} rounded-xl sm:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
           <IconComponent className="w-10 h-10 text-white" />
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-bold text-gray-900 font-heading group-hover:text-ed24-purple transition-colors">
+        <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 font-heading group-hover:text-ed24-purple transition-colors">
           {course.title}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 text-base leading-relaxed">
+        <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
           {course.description}
         </p>
 
@@ -156,7 +156,7 @@ function CourseCard({ course, index }: { course: typeof courses[0], index: numbe
         {/* CTA with improved design */}
         <a
           href="tel:9377002424"
-          className="flex items-center justify-center gap-2 bg-gradient-to-r from-ed24-purple to-ed24-orange hover:from-ed24-orange hover:to-ed24-purple text-white px-6 py-3 rounded-xl transition-all duration-300 font-semibold text-sm shadow-md hover:shadow-lg hover:scale-105 transform"
+          className="flex items-center justify-center gap-2 bg-gradient-to-r from-ed24-purple to-ed24-orange hover:from-ed24-orange hover:to-ed24-purple text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl transition-all duration-300 font-semibold text-xs sm:text-sm shadow-md hover:shadow-lg hover:scale-105 transform"
         >
           <Phone className="w-5 h-5" />
           Call ED24
@@ -187,7 +187,7 @@ export default function Courses() {
         </motion.div>
 
         {/* Course Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {courses.map((course, index) => (
             <CourseCard key={index} course={course} index={index} />
           ))}
