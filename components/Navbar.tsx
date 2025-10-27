@@ -113,24 +113,27 @@ export default function Navbar() {
             className="md:hidden bg-white border-t"
           >
             <div className="px-4 py-4 space-y-4">
-              <button
+              <a
+                href="#courses"
                 onClick={() => scrollToSection('courses')}
                 className="block w-full text-left text-gray-700 hover:text-ed24-purple transition-colors font-medium py-2"
               >
                 Courses
-              </button>
-              <button
+              </a>
+              <a
+                href="#about"
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left text-gray-700 hover:text-ed24-purple transition-colors font-medium py-2"
               >
                 About Us
-              </button>
-              <button
+              </a>
+              <a
+                href="#contact"
                 onClick={() => scrollToSection('contact')}
                 className="block w-full text-left text-gray-700 hover:text-ed24-purple transition-colors font-medium py-2"
               >
                 Contact
-              </button>
+              </a>
               <button
                 onClick={() => window.open('https://wa.me/919377002424', '_blank')}
                 className="w-full bg-ed24-orange hover:bg-orange-500 text-white px-6 py-2 rounded-lg transition-colors font-medium"
