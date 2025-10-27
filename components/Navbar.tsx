@@ -43,7 +43,9 @@ export default function Navbar() {
               className="h-10 w-auto"
               priority
             />
-            <span className="text-xs text-white/80 font-medium hidden sm:block">
+            <span className={`text-xs font-medium hidden sm:block transition-colors ${
+              isScrolled ? 'text-gray-600' : 'text-white/80'
+            }`}>
               education for everyone
             </span>
           </div>
